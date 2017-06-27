@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="external/jquery/dist/jquery.js"></script>
-    <script src="external/EasyAutocomplete/dist/jquery.easy-autocomplete.js"></script>
+    <link rel="stylesheet" href="external/jquery-ui/themes/base/jquery-ui.css">
 </head>
 <body>
-    <img id="logo" src="assets/img/logoB.png" alt="logo autocars lozere">
-    <div id="content" class="main">
+  <img id="logo" src="assets/img/logoB.png" alt="logo autocars lozere">
+
+    <div id="content" class="ui-widjet">
             <input type="text" id="departure">
             <input type="text" id="arrival">
-            <button id="search">Rechercher</button>
-  
+            <input type="submit" name="Rechercher" value="Rechercher" id="search">
+
     </div>
-    <!-- <script src="external/jquery/dist/jquery.js"></script>
-    <script src="external/EasyAutocomplete/dist/jquery.easy-autocomplete.js"></script> -->
+
+    <script src="external/jquery/dist/jquery.js"></script>
+    <script src="external/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="autocomplete.js"></script>
     <script type="text/javascript" src="basic_functions.js"></script>
     <script type="text/javascript" src="progressive_web_app.js"></script>
 </body>
