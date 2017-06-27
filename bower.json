@@ -1,0 +1,21 @@
+{
+  "name": "otokar",
+  "homepage": "https://github.com/robinBanquo/otokar",
+  "authors": [
+    "bl00m <leduc@openmailbox.org>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "external",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
