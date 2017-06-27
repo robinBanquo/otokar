@@ -56,7 +56,6 @@ function getArretList(json, lines) {
             }
         }
     }
-    console.log(result);
     return result
 }
 
