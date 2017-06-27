@@ -3,49 +3,55 @@
  */
 $(document).ready(function () {
     $('#search').click(function(event) {
-        event.preventDefault();
         var departure = $('#departure').val();
         var arrival = $('#arrival').val();
         let now = new Date();
-        var appendable_text = "<h1>Heure de départ des trois prochains bus à destination de " + arrival + " : </h1>" +
-            "<ul>";
-        $.getJSON('https://raw.githubusercontent.com/robinBanquo/otokar/master/data/Mende-Clermont_Ferrand.json', function (data) {
-
-            var dep_schedule_array = data[departure] ;
-            var arriv_shedule_array = data[arrival];
-            console.log(dep_schedule_array);
+        var appendable_text = "<h1>Autobus pour " + arrival + " : </h1>" +
+            "<table>" +
+            "<tr>" +
+            "<th>départs</th>" +
+            "<th>arrivées</th>" +
+            "</tr>";
+        $.getJSON('data/Mende-Clermont_Ferrand.json', function (data) {
+            var departure_schedule_array = data['Mende-Clermont_Ferrand'][departure] ;
+            var arrival_schedule_array = data['Mende-Clermont_Ferrand'][arrival] ;
             var counter = 0 ;
-            var i = 0;
-            dep_schedule_array.each(function (shedule) {
-
+            for (var i=0; i<departure_schedule_array.length; i++) {
+                var schedule = departure_schedule_array[i];
                 if (counter < 3 ){
-                    if(shedule.substr(0,2) == now.getHours()){
-                        if(shedule.substr(3,2) > now.getMinutes()) {
-                            appendable_text += "<li>" + shedule + "</li> ";
+                    if(schedule.substr(0,2) == now.getHours()){
+                        if(schedule.substr(3,2) > now.getMinutes()) {
+                            appendable_text += "<tr>" +
+                                "<td>" + schedule + "</td>" +
+                                "<td>" + arrival_schedule_array[i] + "</td>" +
+                                "</tr>";
                             counter++;
                         }
-                    }else if (shedule.substr(0,2) > now.getHours()){
-                        appendable_text += "<li>" + shedule + "</li> ";
+                    }else if (schedule.substr(0,2) > now.getHours()){
+                        appendable_text += "<tr>" +
+                            "<td>" + schedule + "</td>" +
+                            "<td>" + arrival_schedule_array[i] + "</td>" +
+                            "</tr>";
                         counter++;
                     }
                 }
-                i++;
-            });
-            appendable_text += "</ul>";
+            }
+            appendable_text += "</table>";
 
-            $('#content').innerHTML = appendable_text;
+            $('#content').empty().append(appendable_text);
 
         });
+        event.preventDefault();
     });
 
     var options = {
-    	url: "./data/arret_liste.json",
+        url: "./data/arret_liste.json",
         listLocation: "arrets",
-    	list: {
-    		match: {
-    			enabled: true
-    		}
-    	}
+        list: {
+            match: {
+                enabled: true
+            }
+        }
     };
 
     $("#departure").easyAutocomplete(options);
