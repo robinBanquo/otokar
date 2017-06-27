@@ -3,18 +3,16 @@
  */
 $(document).ready(function () {
     $('#search').click(function(event) {
-        event.preventDefault();
         var departure = $('#departure').val();
         var arrival = $('#arrival').val();
         let now = new Date();
         var appendable_text = "<h1>Heure de départ des trois prochains bus à destination de " + arrival + " : </h1>" +
             "<ul>";
-        $.getJSON('https://raw.githubusercontent.com/robinBanquo/otokar/master/data/Mende-Clermont_Ferrand.json', function (data) {
-
-            var schedule_array = data[departure] ;
-            console.log(schedule_array);
+        $.getJSON('data/Mende-Clermont_Ferrand.json', function (data) {
+            var schedule_array = data['Mende-Clermont_Ferrand'][departure] ;
             var counter = 0 ;
-            schedule_array.each(function (shedule) {
+            for (var i=0; i<schedule_array.length; i++) {
+                shedule = schedule_array[i];
                 if (counter < 3 ){
                     if(shedule.substr(0,2) == now.getHours()){
                         if(shedule.substr(3,2) > now.getMinutes()) {
@@ -26,12 +24,13 @@ $(document).ready(function () {
                         counter++;
                     }
                 }
-            });
+            }
             appendable_text += "</ul>";
 
-            $('#content').innerHTML = appendable_text;
+            $('#content').empty().append(appendable_text);
 
         });
+        event.preventDefault();
     });
 
     var options = {
