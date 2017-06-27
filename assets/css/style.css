@@ -35,7 +35,20 @@ img{
 margin: 10px 0 10px 0;
     width: 100%;
 }
-
+.retour{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+}
+.retour i{
+    font-size: 1.5em;
+}
 /*body{*/
   /*background-image: url('../img/bg.jpg');*/
   /*background-position: center;*/

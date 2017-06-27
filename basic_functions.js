@@ -42,8 +42,8 @@ $(document).ready(function () {
                 var arrival_schedule_array = data[arrival] ;
                 console.log(arrival_schedule_array);
                 //on crée une base d'html à inclure
-                var appendable_text = "<div class='panel'> <div class='panel-heading'><h1>Autobus pour " + arrival + " : </h1>" +
-                    "</div><div class='panel-body'><table>" +
+                var appendable_text = "<div class='panel'> <div class='panel-heading'><h3>Autobus pour " + arrival + " : </h3>" +
+                    "</div><div class='panel-body'><table class='table'>" +
                     "<tr>" +
                     "<th>départs</th>" +
                     "<th>arrivées</th>" +
@@ -89,9 +89,15 @@ $(document).ready(function () {
                     }
                 }
                 //on referme le tableau
-                appendable_text += "</table> </div> </div>";
+                appendable_text += "</table> </div> </div>" +
+                    "<button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left'></i></a>";
                 //et on remplit la div avec notre texte html de résultat
+                var page1 = $('#content').innerHTML ;
                 $('#content').empty().append(appendable_text);
+                $('.retour').click(function () {
+                    $('#content').empty().append(page1);
+
+                });
             });
         });
     });
