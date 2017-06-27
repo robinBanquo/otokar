@@ -11,11 +11,25 @@ $(document).ready(function () {
             shedule_array.each(function (shedule) {
                 if(shedule.substr(0,2) == now.getHours()){
                     if(shedule.substr(0,2) > now.getHours());
-                    
+
                 }else if (shedule.substr(0,2) > now.getHours()){
 
                 }
             })
         });
     });
+
+    var options = {
+    	url: "data/arret_liste.json",
+
+        listLocation: "arrets",
+
+    	list: {
+    		match: {
+    			enabled: true
+    		}
+    	}
+    };
+
+    $("#departure").easyAutocomplete(options);
 });

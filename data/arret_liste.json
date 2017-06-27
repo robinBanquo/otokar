@@ -1,1 +1,14 @@
-{"arrets":["Mende (Gare SNCF)","Chanac (Gare SNCF)","Le Monastier (Gare SNCF)","Le Monastier (Ville)","Chirac (Ville)","Marvejols (Gare SNCF)","Aumont-Aubrac (Gare SNCF)","St Ch\\u00e9ly d'Apcher (Gare SNCF)","St Flour (Gare SNCF)","Clermont-Ferrand (Gare SNCF)"]}
+{
+   "arrets":[
+      "Mende (Gare SNCF)",
+      "Chanac (Gare SNCF)",
+      "Le Monastier (Gare SNCF)",
+      "Le Monastier (Ville)",
+      "Chirac (Ville)",
+      "Marvejols (Gare SNCF)",
+      "Aumont-Aubrac (Gare SNCF)",
+      "St Ch\\u00e9ly d'Apcher (Gare SNCF)",
+      "St Flour (Gare SNCF)",
+      "Clermont-Ferrand (Gare SNCF)"
+   ]
+}
