@@ -3,12 +3,19 @@
  */
 $(document).ready(function () {
     $('#submit').click(function() {
-        var start = $('#start').val();
-        var finish = $('#finish').val();
-        $.getJSON('data/Mende-Clermont_Ferrand.json', function () {
-            $.each(data , function ( stand_name ,  shedule_array) {
-                
-            }
+        var departure = $('#departure').val();
+        var arrival = $('#arrival').val();
+        var now = new Date();
+        $.getJSON('https://raw.githubusercontent.com/robinBanquo/otokar/master/data/Mende-Clermont_Ferrand.json', function (data) {
+            var shedule_array = data[departure] ;
+            shedule_array.each(function (shedule) {
+                if(shedule.substr(0,2) == now.getHours()){
+                    if(shedule.substr(0,2) > now.getHours());
+                    
+                }else if (shedule.substr(0,2) > now.getHours()){
+
+                }
+            })
         });
     });
 });
