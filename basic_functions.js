@@ -42,8 +42,8 @@ $(document).ready(function () {
                 var arrival_schedule_array = data[arrival] ;
                 console.log(arrival_schedule_array);
                 //on crée une base d'html à inclure
-                var appendable_text = "<h1>Autobus pour " + arrival + " : </h1>" +
-                    "<table>" +
+                var appendable_text = "<div class='panel'> <div class='panel-heading'><h1>Autobus pour " + arrival + " : </h1>" +
+                    "</div><div class='panel-body'><table>" +
                     "<tr>" +
                     "<th>départs</th>" +
                     "<th>arrivées</th>" +
@@ -89,7 +89,7 @@ $(document).ready(function () {
                     }
                 }
                 //on referme le tableau
-                appendable_text += "</table>";
+                appendable_text += "</table> </div> </div>";
                 //et on remplit la div avec notre texte html de résultat
                 $('#content').empty().append(appendable_text);
             });
