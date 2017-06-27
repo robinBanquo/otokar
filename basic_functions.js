@@ -29,4 +29,16 @@ $(document).ready(function () {
 
         });
     });
+
+    var options = {
+    	url: "data/arret_liste.json",
+        listLocation: "arrets",
+    	list: {
+    		match: {
+    			enabled: true
+    		}
+    	}
+    };
+
+    $("#departure").easyAutocomplete(options);
 });
