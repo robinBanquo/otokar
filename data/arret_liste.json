@@ -1,9 +1,9 @@
 {
     "lignes": ["Mende-Clermont_Ferrand", "St_Chély_dApcher-Marvejols-Mende-La Bastide"],
     "arrets": {
-        "St Ch\\u00e9ly (Gare SNCF)": [1],
+        "St Chély (Gare SNCF)": [1],
         "Aumont Aubrac (Gare SNCF)": [1],
-        "Marvejols (Arr\\u00eat Bus Notre Dame)": [1],
+        "Marvejols (Arrêt Bus Notre Dame)": [1],
         "Marvejols ( Gare SNCF )": [1],
         "Chirac (Ville)": [0, 1],
         "Le Monastier (Ville)": [0, 1],
@@ -12,7 +12,7 @@
         "Chanac (Gare SNCF)": [0, 1],
         "Le Bruel (Gare RN88)": [1],
         "Barjac (Ville)": [1],
-        "Balsi\\u00e8ges (Arr\\u00eat SNCF RN88)": [1],
+        "Balsièges (Arrêt SNCF RN88)": [1],
         "Mende (Place du Foiral)": [1],
         "Mende (Gare SNCF)": [0, 1],
         "Bagnols Chadenet": [1],
@@ -22,10 +22,10 @@
         "La Bastide St Laurent": [1],
         "Trains en correspondance": [1],
         "Direction / Provenance": [1],
-        "D\\u00e9part en correspondance": [1],
+        "Départ en correspondance": [1],
         "Marvejols (Gare SNCF)": [0],
         "Aumont-Aubrac (Gare SNCF)": [0],
-        "St Ch\\u00e9ly d'Apcher (Gare SNCF)": [0],
+        "St Chély d'Apcher (Gare SNCF)": [0],
         "St Flour (Gare SNCF)": [0],
         "Clermont-Ferrand (Gare SNCF)": [0]
     }
