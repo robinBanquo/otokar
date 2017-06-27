@@ -2,7 +2,8 @@
  * Created by banquo on 27/06/17.
  */
 $(document).ready(function () {
-    $('#submit').click(function() {
+    $('#search').click(function(event) {
+        event.preventDefault();
         var departure = $('#departure').val();
         var arrival = $('#arrival').val();
         let now = new Date();
@@ -11,6 +12,7 @@ $(document).ready(function () {
         $.getJSON('https://raw.githubusercontent.com/robinBanquo/otokar/master/data/Mende-Clermont_Ferrand.json', function (data) {
 
             var schedule_array = data[departure] ;
+            console.log(schedule_array);
             var counter = 0 ;
             schedule_array.each(function (shedule) {
                 if (counter < 3 ){
@@ -27,11 +29,13 @@ $(document).ready(function () {
             });
             appendable_text += "</ul>";
 
+            $('#content').innerHTML = appendable_text;
+
         });
     });
 
     var options = {
-    	url: "data/arret_liste.json",
+    	url: "./data/arret_liste.json",
         listLocation: "arrets",
     	list: {
     		match: {
@@ -41,4 +45,5 @@ $(document).ready(function () {
     };
 
     $("#departure").easyAutocomplete(options);
+    $("#arrival").easyAutocomplete(options);
 });
