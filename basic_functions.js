@@ -43,17 +43,5 @@ $(document).ready(function () {
         });
         event.preventDefault();
     });
-
-    var options = {
-        url: "./data/arret_liste.json",
-        listLocation: "arrets",
-        list: {
-            match: {
-                enabled: true
-            }
-        }
-    };
-
-    $("#departure").easyAutocomplete(options);
-    $("#arrival").easyAutocomplete(options);
+    
 });
