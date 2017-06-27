@@ -80,8 +80,7 @@ $(document).ready(function () {
                 }
 
                 if(counter<3){
-                appendable_text += "<tr>demain : </tr>" +
-                        ;
+                appendable_text += "<tr>demain : </tr>";
                     for(var k = 0 ; k< (3-counter); k++ ){
                         appendable_text += "<tr>" +
                         "<td>" + departure_schedule_array[k] + "</td>" +
