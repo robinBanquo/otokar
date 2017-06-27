@@ -1,14 +1,32 @@
 {
-   "arrets":[
-      "Mende (Gare SNCF)",
-      "Chanac (Gare SNCF)",
-      "Le Monastier (Gare SNCF)",
-      "Le Monastier (Ville)",
-      "Chirac (Ville)",
-      "Marvejols (Gare SNCF)",
-      "Aumont-Aubrac (Gare SNCF)",
-      "St Ch\\u00e9ly d'Apcher (Gare SNCF)",
-      "St Flour (Gare SNCF)",
-      "Clermont-Ferrand (Gare SNCF)"
-   ]
+    "lignes": ["Mende-Clermont_Ferrand", "St_Chély_dApcher-Marvejols-Mende-La Bastide"],
+    "arrets": {
+        "St Ch\\u00e9ly (Gare SNCF)": [1],
+        "Aumont Aubrac (Gare SNCF)": [1],
+        "Marvejols (Arr\\u00eat Bus Notre Dame)": [1],
+        "Marvejols ( Gare SNCF )": [1],
+        "Chirac (Ville)": [0, 1],
+        "Le Monastier (Ville)": [0, 1],
+        "Le Monastier (Gare SNCF)": [0, 1],
+        "Les Salelles (Embranchement RN88)": [1],
+        "Chanac (Gare SNCF)": [0, 1],
+        "Le Bruel (Gare RN88)": [1],
+        "Barjac (Ville)": [1],
+        "Balsi\\u00e8ges (Arr\\u00eat SNCF RN88)": [1],
+        "Mende (Place du Foiral)": [1],
+        "Mende (Gare SNCF)": [0, 1],
+        "Bagnols Chadenet": [1],
+        "Allenc": [1],
+        "Belvezet": [1],
+        "Chasserades": [1],
+        "La Bastide St Laurent": [1],
+        "Trains en correspondance": [1],
+        "Direction / Provenance": [1],
+        "D\\u00e9part en correspondance": [1],
+        "Marvejols (Gare SNCF)": [0],
+        "Aumont-Aubrac (Gare SNCF)": [0],
+        "St Ch\\u00e9ly d'Apcher (Gare SNCF)": [0],
+        "St Flour (Gare SNCF)": [0],
+        "Clermont-Ferrand (Gare SNCF)": [0]
+    }
 }

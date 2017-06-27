@@ -1,0 +1,135 @@
+{
+  "St Ch\\u00e9ly (Gare SNCF)": [
+    "06:26",
+    false,
+    false,
+    false,
+    false
+  ],
+  "Aumont Aubrac (Gare SNCF)": [
+    "06:37",
+    false,
+    false,
+    false,
+    false
+  ],
+  "Marvejols (Arr\\u00eat Bus Notre Dame)": [
+    "06:58",
+    false,
+    false,
+    false,
+    false
+  ],
+  "Marvejols ( Gare SNCF )": [
+    "07:01",
+    "07:35",
+    false,
+    "13:32",
+    false
+  ],
+  "Chirac (Ville)": [
+    "07:05",
+    "07:41",
+    false,
+    "13:37",
+    false
+  ],
+  "Le Monastier (Ville)": [
+    "07:08",
+    "07:44",
+    false,
+    "13:42",
+    false
+  ],
+  "Le Monastier (Gare SNCF)": [
+    "07:10",
+    "07:46",
+    false,
+    "-",
+    false
+  ],
+  "Les Salelles (Embranchement RN88)": [
+    "07:18",
+    "07:56",
+    false,
+    "13:52",
+    false
+  ],
+  "Chanac (Gare SNCF)": [
+    "07:23",
+    "08:01",
+    false,
+    "13:58",
+    false
+  ],
+  "Le Bruel (Gare RN88)": [
+    "07:26",
+    "08:04",
+    false,
+    "14:01",
+    false
+  ],
+  "Barjac (Ville)": [
+    "07:33",
+    "08:11",
+    false,
+    "14:09",
+    false
+  ],
+  "Balsi\\u00e8ges (Arr\\u00eat SNCF RN88)": [
+    "07:38",
+    "08:15",
+    false,
+    "14:13",
+    false
+  ],
+  "Mende (Place du Foiral)": [
+    "07:46",
+    "08:23",
+    false,
+    "14:21",
+    false
+  ],
+  "Mende (Gare SNCF)": [
+    false,
+    false,
+    "08:38",
+    false,
+    "18:34"
+  ],
+  "Bagnols Chadenet": [
+    false,
+    false,
+    "08:59",
+    false,
+    "18:53"
+  ],
+  "Allenc": [
+    false,
+    false,
+    "09:05",
+    false,
+    "18:59"
+  ],
+  "Belvezet": [
+    false,
+    false,
+    "09:23",
+    false,
+    "19:17"
+  ],
+  "Chasserades": [
+    false,
+    false,
+    "09:36",
+    false,
+    "19:30"
+  ],
+  "La Bastide St Laurent": [
+    false,
+    false,
+    "09:48",
+    false,
+    "19:42"
+  ]
+}
