@@ -1,6 +1,12 @@
 /**
  * Created by banquo on 27/06/17.
  */
+ function compareTime(before, after) {
+     return before.substr(0, 2) < after.substr(0, 2) ||
+     (before.substr(0, 2) == after.substr(0, 2) &&
+     before.substr(3, 2) < after.substr(3, 2))
+ }
+
 $(document).ready(function () {
     $('#search').click(function(event) {
         //on empeche la page de s'actualiser
@@ -40,7 +46,6 @@ $(document).ready(function () {
                 //on récupère les horraires de passage a l'arivée et au départ
                 var departure_schedule_array = data[departure] ;
                 var arrival_schedule_array = data[arrival] ;
-                console.log(arrival_schedule_array);
                 //on crée une base d'html à inclure
                 var appendable_text = "<div class='panel'> <div class='panel-heading'><h3>Autobus pour " + arrival + " : </h3>" +
                     "</div><div class='panel-body'><table class='table'>" +
@@ -51,52 +56,43 @@ $(document).ready(function () {
                 //on definit un compteur pour avoir un nombre max de réponses
                 var counter = 0 ;
                 //on boucle sur les horaires de départs
+                var last_sched = null
                 for (var i=0; i<departure_schedule_array.length; i++) {
                     var schedule = departure_schedule_array[i];
                     //si on est en dessous de la limite d'horaires a renvoyer
+
                     if (counter < 3 ) {
                         //si c'est la meme heure que maintenant
                         if (schedule) {
-                            if (schedule.substr(0, 2) == now.getHours()) {
-                                //et si le bus passe après
-                                if (schedule.substr(3, 2) > now.getMinutes()) {
-                                    //on rajoute et on met en page les horaires
-                                    appendable_text += "<tr>" +
-                                        "<td>" + schedule + "</td>" +
-                                        "<td>" + arrival_schedule_array[i] + "</td>" +
-                                        "</tr>";
-                                    counter++;
-                                }
-                                //on fait aussi si l'eure de départ est ultérieure à maintenant
-                            } else if (schedule.substr(0, 2) > now.getHours()) {
+                            console.log(schedule);
+                            if (compareTime(now.getHours() + ':' + now.getMinutes(), schedule) &&
+                                compareTime(schedule, arrival_schedule_array[i])) {
+                                console.log('1');
                                 appendable_text += "<tr>" +
-                                    "<td>" + schedule + "</td>" +
-                                    "<td>" + arrival_schedule_array[i] + "</td>" +
-                                    "</tr>";
+                                "<td>" + schedule + "</td>" +
+                                "<td>" + arrival_schedule_array[i] + "</td>" +
+                                "</tr>";
                                 counter++;
                             }
+                            last_sched = schedule
                         }
                     }
+
                 }
 
-                if(counter<3){
-                appendable_text += "<tr>demain : </tr>";
-                    for(var k = 0 ; k< (3-counter); k++ ){
-                        appendable_text += "<tr>" +
-                        "<td>" + departure_schedule_array[k] + "</td>" +
-                        "<td>" + arrival_schedule_array[k] + "</td>" +
-                        "</tr>";
-                    }
-                }
                 //on referme le tableau
                 appendable_text += "</table> </div> </div>" +
                     "<button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left'></i></a>";
                 //et on remplit la div avec notre texte html de résultat
                 var page1 = $('#content').innerHTML ;
+
                 $('#content').empty().append(appendable_text);
+                if (counter == 0) {
+                    $('#content .panel-body').empty().append('<p>Il n\'y a plus de bus à cette horraire.</p>');
+                }
+
                 $('.retour').click(function () {
                     $('#content').empty().append(page1);
-
                 });
             });
         });
