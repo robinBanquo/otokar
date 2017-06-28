@@ -11,6 +11,10 @@ main{
     height: 100%;
 
 
+
+}
+#content{
+    margin-top: 60px;
 }
 header{
     position: fixed;
@@ -35,7 +39,18 @@ img{
 margin: 10px 0 10px 0;
     width: 100%;
 }
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+    align-items: center;
+}
 .retour{
+    margin: auto;
     height: 50px;
     width: 50px;
     background-color: white;
@@ -43,12 +58,55 @@ margin: 10px 0 10px 0;
     display: flex;
     align-items: center;
     text-align: center;
-    margin: auto;
-    margin-top: 60px;
+
 }
 .retour i{
     font-size: 1.5em;
+    position: relative;
+    left : 2px;
 }
+.table{
+    text-align: center;
+    font-size: 1.1em;
+}
+th{
+    text-align: center;
+}
+title{
+    font-size: 1.1em;
+}
+.conteneur{
+    margin: 10px 40px 0 40px;
+    font-size: 20px;
+}
+.red{
+    color: #8F010C;
+}
+.blue{
+    color: #1B1463;
+}
+.date-btn, .map-btn{
+    border: none;
+}
+.panel-body{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.panel-heading{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.date-btn , .map-btn{
+    margin-top: 0;
+}
+.labelo{
+    width: 90px;
+}
+
+#map {
+    height: 40vh;
+}
+
 /*body{*/
   /*background-image: url('../img/bg.jpg');*/
   /*background-position: center;*/
