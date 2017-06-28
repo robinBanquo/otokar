@@ -1,0 +1,13 @@
+{
+   "short_name": "otokar",
+   "name": "Otokar",
+   "icons": [    {
+      "src": "assets/img/bg.png",
+      "type": "image/png",
+      "sizes": "48x48"
+      }  ],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#23507a",
+    "display": "standalone",
+    "theme_color": "#23507a"
+ }
