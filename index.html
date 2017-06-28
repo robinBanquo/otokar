@@ -14,15 +14,18 @@
 <main>
     <div class="grille fluid-container">
         <div id="content" class="ui-widjet form-group container formulaire">
-            <div class="input-group form-group-lg">
-                <label class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                <input type="text" id="departure" placeholder="Départ" class="form-control">
+            <div id="form">
+                <div class="input-group form-group-lg">
+                    <label class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></label>
+                    <input type="text" id="departure" placeholder="Départ" class="form-control">
+                </div>
+                <div class="input-group form-group-lg">
+                    <label class="input-group-addon"><i class="glyphicon glyphicon-flag"></i></label>
+                    <input type="text" id="arrival" placeholder="Arrivée" class="form-control">
+                </div>
+                <button type="submit" name="Rechercher" id="search" class="btn btn-default btn-block btn-lg"><i class="glyphicon glyphicon-search blue"></i></button>
             </div>
-            <div class="input-group form-group-lg">
-                <label class="input-group-addon"><i class="glyphicon glyphicon-flag"></i></label>
-                <input type="text" id="arrival" placeholder="Arrivée" class="form-control">
-            </div>
-            <button type="submit" name="Rechercher" id="search" class="btn btn-default btn-block btn-lg"><i class="glyphicon glyphicon-search"></i></button>
+            <div id="result" class=""></div>
         </div>
     </div>
 </main>
