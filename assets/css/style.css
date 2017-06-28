@@ -81,7 +81,7 @@ title{
 .blue{
     color: #1B1463;
 }
-.date-btn{
+.date-btn, .map-btn{
     border: none;
 }
 .panel-body{
@@ -92,7 +92,7 @@ title{
     padding-top: 0;
     padding-bottom: 0;
 }
-.date-btn{
+.date-btn , .map-btn{
     margin-top: 0;
 }
 .labelo{

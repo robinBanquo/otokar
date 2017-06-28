@@ -89,9 +89,12 @@ function horaires(now) {
             }
 
             //on referme le tableau
-            appendable_text += "</tbody></table> </div><button class='btn btn-default btn-lg date-btn '><i class='glyphicon glyphicon-calendar'></i> Plus d'horaires</button> </div>" +
-                "<div class='footer'><button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left red'></i></button></div>";
-            //et on remplit la div avec notre texte html de résultat
+            appendable_text += "</tbody></table></div>" +
+                "<div class='btn-group btn-group-justified'>" +
+                "<div class='btn-group'> <button class='btn btn-default btn-lg date-btn'><i class='glyphicon glyphicon-calendar'></i> Plus d'horaires</button></div>" +
+                "<div class='btn-group'> <button class='btn btn-default btn-lg map-btn'><i class='glyphicon glyphicon-map-marker'></i> Map</button></div>" +
+                "</div></div>" +
+                "<button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left red'></i></a>";
 
             $('#result').empty().append(appendable_text);
             if (counter == 0) {
@@ -128,6 +131,16 @@ function horaires(now) {
                 //
                 //
                 // })
+                $('.map-btn').click(function () {
+                    var map = L.map('map').setView([44.522039, 3.502283], 13);
+                    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+                    L.marker([44.522039, 3.502283]).addTo(map)
+                        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                        .openPopup();
+                    $('#content .panel-body').empty.append(map);
+                })
             });
         });
     });
