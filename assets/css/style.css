@@ -48,6 +48,31 @@ margin: 10px 0 10px 0;
 }
 .retour i{
     font-size: 1.5em;
+    position: relative;
+    left : 2px;
+}
+.table{
+    text-align: center;
+    font-size: 1.3em;
+}
+th{
+    text-align: center;
+}
+title{
+    font-size: 1.3em;
+}
+.conteneur{
+    margin: 10px 40px 0 40px;
+    font-size: 20px;
+}
+.red{
+    color: #8F010C;
+}
+.blue{
+    color: #1B1463;
+}
+.date-btn{
+    border: none;
 }
 /*body{*/
   /*background-image: url('../img/bg.jpg');*/

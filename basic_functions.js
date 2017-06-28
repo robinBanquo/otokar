@@ -2,6 +2,7 @@
  * Created by banquo on 27/06/17.
  */
 $(document).ready(function () {
+    $('#result').hide();
     $('#search').click(function(event) {
         //on empeche la page de s'actualiser
         event.preventDefault();
@@ -42,19 +43,22 @@ $(document).ready(function () {
                 var arrival_schedule_array = data[arrival] ;
                 console.log(arrival_schedule_array);
                 //on crée une base d'html à inclure
-                var appendable_text = "<div class='panel'> <div class='panel-heading'><h3>Autobus pour " + arrival + " : </h3>" +
+                var appendable_text = "<div class='panel'> <div class='panel-heading'><h4 class='title'><div class='conteneur'><strong>Autobus pour " + arrival + "</strong></div></h4>" +
                     "</div><div class='panel-body'><table class='table'>" +
+                    "<thead>" +
                     "<tr>" +
-                    "<th>départs</th>" +
-                    "<th>arrivées</th>" +
-                    "</tr>";
+                    "<th class='title'>Départs</th>" +
+                    "<th class='title'>Arrivées</th>" +
+                    "</tr>" +
+                    "</thead>" +
+                    "<tbody>";
                 //on definit un compteur pour avoir un nombre max de réponses
                 var counter = 0 ;
                 //on boucle sur les horaires de départs
                 for (var i=0; i<departure_schedule_array.length; i++) {
                     var schedule = departure_schedule_array[i];
                     //si on est en dessous de la limite d'horaires a renvoyer
-                    if (counter < 3 ) {
+                    if (counter < 4 ) {
                         //si c'est la meme heure que maintenant
                         if (schedule) {
                             if (schedule.substr(0, 2) == now.getHours()) {
@@ -79,9 +83,9 @@ $(document).ready(function () {
                     }
                 }
 
-                if(counter<3){
-                appendable_text += "<tr>demain : </tr>";
-                    for(var k = 0 ; k< (3-counter); k++ ){
+                if(counter<4){
+                    appendable_text += "<tr>demain : </tr>";
+                    for(var k = 0 ; k< (4-counter); k++ ){
                         appendable_text += "<tr>" +
                         "<td>" + departure_schedule_array[k] + "</td>" +
                         "<td>" + arrival_schedule_array[k] + "</td>" +
@@ -89,14 +93,27 @@ $(document).ready(function () {
                     }
                 }
                 //on referme le tableau
-                appendable_text += "</table> </div> </div>" +
-                    "<button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left'></i></a>";
+                appendable_text += "</tbody></table> </div><button class='btn btn-default btn-lg date-btn '><i class='glyphicon glyphicon-calendar'></i> Plus d'horaires</button> </div>" +
+                    "<button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left red'></i></a>";
                 //et on remplit la div avec notre texte html de résultat
-                var page1 = $('#content').innerHTML ;
-                $('#content').empty().append(appendable_text);
-                $('.retour').click(function () {
-                    $('#content').empty().append(page1);
+                $('#result').empty().append(appendable_text);
+                $('#form').hide('slide', 200, function () {
+                    $('#result').show('slide', {direction:'right'});
+                });
 
+                $('.retour').click(function () {
+                    $('#result').hide('slide', {direction:'right'}, 200, function () {
+                        $('#form').show('slide');
+                        }
+                    );
+                $('.date-btn').click(function () {
+                    var form_date = "<form class='form-group'>" +
+                        "<input type='date'>" +
+                        "<input type='time'>" +
+                        "<button type='submit' name='Rechercher' id='search' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
+                        "</form>"
+                    
+                })
                 });
             });
         });
