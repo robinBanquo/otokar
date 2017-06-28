@@ -102,15 +102,16 @@ $(document).ready(function () {
                         $('#form').show('slide');
                         }
                     );
+                });
+                console.log($('.date-btn'));
                 $('.date-btn').click(function () {
+                    console.log('ok');
                     var form_date = "<form class='form-group'>" +
                         "<input type='date' class='form-control'>" +
-                        "<input type='time' class='form-control'>>" +
-                        "<button type='submit' name='Rechercher' id='search' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
+                        "<input type='time' class='form-control'>" +
+                        "<button type='submit' name='Rechercher' id='search-more' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
                         "</form>";
-                    $('#content .panel-body').empty.append(form_date);
-                })
-
+                    $('#content .panel-body').empty().append(form_date);
                 });
             });
         });
