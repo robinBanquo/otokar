@@ -108,12 +108,13 @@ $(document).ready(function () {
                     );
                 $('.date-btn').click(function () {
                     var form_date = "<form class='form-group'>" +
-                        "<input type='date'>" +
-                        "<input type='time'>" +
+                        "<input type='date' class='form-control'>" +
+                        "<input type='time' class='form-control'>>" +
                         "<button type='submit' name='Rechercher' id='search' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
-                        "</form>"
-                    
+                        "</form>";
+                    $('.panel-body').empty.append(form_date)
                 })
+
                 });
             });
         });
