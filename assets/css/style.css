@@ -98,6 +98,10 @@ title{
 .labelo{
     width: 80px;
 }
+
+#map {
+    height: 40vh;
+}
 /*body{*/
   /*background-image: url('../img/bg.jpg');*/
   /*background-position: center;*/

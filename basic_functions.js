@@ -125,22 +125,19 @@ function horaires(now) {
                     "<button type='submit' name='Rechercher' id='search-more' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
                     "</form>";
                 $('#content .panel-body').empty().append(form_date);
-                // $('#search-more').click(function () {
-                //     var time = $('#time').val();
-                //
-                //
-                //
-                // })
-                $('.map-btn').click(function () {
-                    var map = L.map('map').setView([44.522039, 3.502283], 13);
-                    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    }).addTo(map);
-                    L.marker([44.522039, 3.502283]).addTo(map)
-                        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-                        .openPopup();
-                    $('#content .panel-body').empty.append(map);
-                })
+            });
+
+            $('.map-btn').click(function () {
+                $('#content .panel-body').empty().append('<div id="map"></div>');
+                var map = L.map('map').setView([44.522039, 3.502283], 13);
+
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                L.marker([44.522039, 3.502283]).addTo(map)
+                .bindPopup('Mende (Gare SNCF)')
+                .openPopup();
             });
         });
     });
