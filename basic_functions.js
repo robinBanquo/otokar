@@ -120,7 +120,7 @@ function horaires(now) {
                     "</div>" +
                     "<div class='input-group form-group-lg'>" +
                     "<label class='input-group-addon labelo'><i class='glyphicon glyphicon-time'></i> Départ</label>" +
-                    "<input type='number' min=0 max=23 id='time' class='form-control'>" +
+                    '<select class="form-control"><option value="0">0h</option><option value="1">1h</option><option value="2">2h</option><option value="3">3h</option><option value="4">4h</option><option value="5">5h</option><option value="6">6h</option><option value="7" selected>7h</option><option value="8">8h</option><option value="9">9h</option><option value="10">10h</option><option value="11">11h</option><option value="12">12h</option><option value="13">13h</option><option value="14">14h</option><option value="15">15h</option><option value="16">16h</option><option value="17">17h</option><option value="18">18h</option><option value="19">19h</option><option value="20">20h</option><option value="21">21h</option><option value="22">22h</option><option value="23">23h</option></select>' +
                     "</div>" +
                     "<button type='submit' name='Rechercher' id='search-more' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
                     "</form>";
