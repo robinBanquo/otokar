@@ -86,7 +86,7 @@ $(document).ready(function () {
 
                 //on referme le tableau
                 appendable_text += "</tbody></table> </div><button class='btn btn-default btn-lg date-btn '><i class='glyphicon glyphicon-calendar'></i> Plus d'horaires</button> </div>" +
-                    "<button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left red'></i></a>";
+                    "<div class='footer'><button class='btn btn-standart retour'><i class='glyphicon glyphicon-chevron-left red'></i></button></div>";
                 //et on remplit la div avec notre texte html de résultat
 
                 $('#result').empty().append(appendable_text);

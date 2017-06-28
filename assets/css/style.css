@@ -35,7 +35,18 @@ img{
 margin: 10px 0 10px 0;
     width: 100%;
 }
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+    align-items: center;
+}
 .retour{
+    margin: auto;
     height: 50px;
     width: 50px;
     background-color: white;
@@ -43,8 +54,7 @@ margin: 10px 0 10px 0;
     display: flex;
     align-items: center;
     text-align: center;
-    margin: auto;
-    margin-top: 60px;
+
 }
 .retour i{
     font-size: 1.5em;
@@ -53,13 +63,13 @@ margin: 10px 0 10px 0;
 }
 .table{
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 th{
     text-align: center;
 }
 title{
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 .conteneur{
     margin: 10px 40px 0 40px;
@@ -73,6 +83,17 @@ title{
 }
 .date-btn{
     border: none;
+}
+.panel-body{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.panel-heading{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.date-btn{
+    margin-top: 0;
 }
 /*body{*/
   /*background-image: url('../img/bg.jpg');*/
