@@ -11,12 +11,13 @@ $(document).ready(function () {
     $('#result').hide();
     $('#search').click(function(event) {
         //on empeche la page de s'actualiser
+        let now = new Date();
         event.preventDefault();
         //on récupere les inputs
         var departure = $('#departure').val();
         var arrival = $('#arrival').val();
         //on chope la date actuelle
-        let now = new Date();
+
 
         //on regarde sur quelles lignes l'arret de départ est située
         $.getJSON('data/arret_liste.json', function (data) {
@@ -107,9 +108,15 @@ $(document).ready(function () {
                 $('.date-btn').click(function () {
                     console.log('ok');
                     var form_date = "<form class='form-group'>" +
-                        "<input type='date' class='form-control'>" +
-                        "<input type='time' class='form-control'>" +
-                        "<button type='submit' name='Rechercher' id='search-more' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
+                            "<div class='input-group form-group-lg'>" +
+                                "<label class='input-group-addon labelo'><i class='glyphicon glyphicon-calendar'></i> Date  </label>" +
+                                "<input type='date' class='form-control'>" +
+                            "</div>" +
+                            "<div class='input-group form-group-lg'>" +
+                                "<label class='input-group-addon labelo'><i class='glyphicon glyphicon-time'></i> Heure</label>" +
+                                "<input type='time' class='form-control'>" +
+                            "</div>" +
+                            "<button type='submit' name='Rechercher' id='search-more' class='btn btn-default btn-block btn-lg'><i class='glyphicon glyphicon-search blue'></i></button>" +
                         "</form>";
                     $('#content .panel-body').empty().append(form_date);
                 });
