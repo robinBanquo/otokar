@@ -11,6 +11,10 @@ main{
     height: 100%;
 
 
+
+}
+#content{
+    margin-top: 60px;
 }
 header{
     position: fixed;
@@ -96,12 +100,13 @@ title{
     margin-top: 0;
 }
 .labelo{
-    width: 80px;
+    width: 90px;
 }
 
 #map {
     height: 40vh;
 }
+
 /*body{*/
   /*background-image: url('../img/bg.jpg');*/
   /*background-position: center;*/
